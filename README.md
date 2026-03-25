@@ -1,2 +1,2 @@
 # AULINHAS_VICENTE
-É um repositorio pra alisar e estudar codigos 
+É um repositorio pra analisar e estudar codigos 
