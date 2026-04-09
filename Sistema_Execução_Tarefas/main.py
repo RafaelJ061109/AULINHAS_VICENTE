@@ -1,4 +1,4 @@
-from class_ import Tarefa, Tarefa_Alternada, Tarefa_limitada
+from class_ import Tarefa, tarefas, Tarefa_Alternada, Tarefa_limitada
 #Sistema de Execução de Tarefas
 
 #Menu
@@ -23,12 +23,11 @@ while True:
         if tarefa_creatore == '1':
             tipo = 'Comum'
             nome = input('Digite o nome da sua tarefa: ')
-            comum = input('Digite a descrição da sua tarefa: ').strip('')
+            comum = input('Digite a descrição da sua tarefa: ').strip()
             tarefa = Tarefa(tipo, nome, comum)
-            print(tarefa)
+            tarefa.add_tarefa()
         
     elif opcao == '2':
-        nome = input('Digite o nome da sua tarefa: ')
-        limitada = input('Digite a descrição da sua tarefa: ').strip('')
-        tarefa = Tarefa(tipo, nome, comum)
-        pass 
+        print("Aqui estão suas tarefas:")
+        for tarefa in tarefas:
+                print(tarefa)
