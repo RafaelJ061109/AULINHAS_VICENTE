@@ -21,13 +21,24 @@ while True:
         print("3 - Alternada")
         tarefa_creatore = input("Opção: ")
         if tarefa_creatore == '1':
-            tipo = 'Comum'
-            nome = input('Digite o nome da sua tarefa: ')
+            tipo = ('Comum').lower()
+            nome = input('Digite o nome da sua tarefa: ').lower()
             comum = input('Digite a descrição da sua tarefa: ').strip()
             tarefa = Tarefa(tipo, nome, comum)
             tarefa.add_tarefa()
+
+        elif tarefa_creatore == '2':
+             tipo = ('Limitada').lower()
+             nome = input('Digite o nome da sua tarefa: ').lower()
+             comum = input('Digite a descrição da sua tarefa: ').lower()
+             limite = int(input('Digite o limite de vezes que essa tarefa pode ser executada: '))
+             tarefa = Tarefa_limitada(tipo, nome, comum, limite)
+             tarefa.add_tarefa()
         
     elif opcao == '2':
         print("Aqui estão suas tarefas:")
         for tarefa in tarefas:
                 print(tarefa)
+    elif opcao == '3':
+        id_tarefa = int(input('Digite o ID da tarefa: '))
+        Tarefa.remover_por_id(id_tarefa)
