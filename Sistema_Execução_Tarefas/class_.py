@@ -1,3 +1,5 @@
+#FICA COMO ESTUDO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 tarefas = []
 
 class Tarefa:
